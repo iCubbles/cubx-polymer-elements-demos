@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My location app</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="../../cubx.core.rte@1.9.0/webcomponents/webcomponents-lite.js"></script>
+
+    <script>
+        window.cubx = {
+            CRCInit: {
+                rootDependencies: [
+                    "../../../bootstrap-3.3.5@1.0.3/bootstrap/main"
+                ]
+            }
+        }
+    </script>
+
+    <!--
+        Refer to the crc-loader artifact from a Cubbles-Base.
+        Take care: All other dependencies are expected to be available within the same Base!
+
+        Want to add a 'main' -script to be executed after the dependencies have been loaded?
+        If yes, add the following attribute: data-crc-main="js/my-script.js"
+    -->
+    <script src="../../cubx.core.rte@1.9.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-10"><h1>My location app</h1></div>
+        <div class="col-sm-2"><input type="button" value="Show my location" id="myLocB" class="btn btn-primary"></div>
+    </div>
+    <div cubx-core-crc class="row">
+        <cubx-google-map cubx-dependency="com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map/main">
+            <cubx-core-init>
+                <cubx-core-slot-init slot="id">"myLocationMap"</cubx-core-slot-init>
+            </cubx-core-init>
+        </cubx-google-map>
+    </div>
+</div>
+
+<script>
+    var googleMap = document.querySelector('cubx-google-map');
+
+    var success = function (position) {
+        var currentLat = position.coords.latitude;
+        var currentLon = position.coords.longitude;
+        googleMap.setLatitude(currentLat);
+        googleMap.setLongitude(currentLon);
+        googleMap.setMarkerToAdd(
+                {
+                    latitude: currentLat,
+                    longitude: currentLon,
+                    title: 'My Location'
+                }
+        );
+        googleMap.setZoom(15);
+    };
+
+    var error = function () {
+        console.error('Unable to retrieve your location');
+    };
+
+    document.addEventListener('cifReady', function() {
+        document.querySelector('#myLocB').addEventListener('click', function () {
+            if (!navigator.geolocation) {
+                console.error('Geolocation is not supported by your browser');
+                return;
+            }
+            navigator.geolocation.getCurrentPosition(success, error);
+        });
+    });
+
+</script>
+</body>
+</html>
