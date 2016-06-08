@@ -10,8 +10,9 @@
   "dependencies": {
     "chalk": "~1.1.0",
     "cubx-grunt-http-server": "^0.1.0",
-    "cubx-grunt-webpackage-scaffold": "^2.4.0",
+    "cubx-grunt-wct-scaffolder": "^0.1.1",
     "cubx-grunt-webpackage-chooser": "^0.1.0",
+    "cubx-grunt-webpackage-scaffold": "^2.4.0",
     "cubx-grunt-webpackage-upload": "^1.7.0",
     "cubx-webpackage-document-api": "^3.0.0",
     "eslint": "^2.4.0",
@@ -50,7 +51,10 @@
     "standard": "^6.0.8",
     "time-grunt": "~1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "http-proxy-middleware": "^0.15.1",
+    "web-component-tester": "^4.2.2"
+  },
   "repository": {
     "type": "git",
     "url": "https://pmt.incowia.de/webble/r/client/cubbles-coder-devtools.git"
