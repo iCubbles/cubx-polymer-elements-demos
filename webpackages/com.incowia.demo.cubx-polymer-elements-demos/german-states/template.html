@@ -1,0 +1,32 @@
+<template id="german-states">
+    <map-controller member-id-ref="mapController"></map-controller>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"><h1>German states using &lt;cubx-google-map&gt; and  &lt;cubx-checkbox&gt;</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2" id="checkBoxesDiv">
+                <cubx-checkbox member-id-ref="allCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="hamburgCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="niedersachsenCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="bremenCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="nordrheinWCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="hessenCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="rheinlandPCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="badenCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="bayernCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="saarlandCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="berlinCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="brandenburgCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="mecklenburgVCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="sachsenCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="sachsenACB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="thueringenCB"></cubx-checkbox>
+                <cubx-checkbox member-id-ref="schleswigHCB"></cubx-checkbox>
+            </div>
+            <div class="col-sm-10" cubx-core-crc>
+                <cubx-google-map member-id-ref="map"></cubx-google-map>
+            </div>
+        </div>
+    </div>
+</template>

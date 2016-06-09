@@ -37,11 +37,10 @@
         ]
       }
     ],
-    "elementaryComponents": [],
-    "compoundComponents": [
+    "elementaryComponents": [
       {
-        "artifactId": "cubx-html-google-map-connector",
-        "description": "Connector between cubx-google-map and cubx-html-components ",
+        "artifactId": "map-controller",
+        "description": "Component process cubx-google-map changes",
         "runnables": [
           {
             "name": "demo",
@@ -51,64 +50,49 @@
           {
             "name": "docs",
             "path": "/docs/index.html",
-            "description": "Show the interface and dataflow of this component."
+            "description": "Show the interface of this component."
           }
         ],
         "endpoints": [
           {
             "endpointId": "main",
+            "description": "This is recommended for you use with webcomponents.",
             "resources": [
-              "css/cubx-html-google-map-connector.css",
-              "hookFunctions.js"
+              "map-controller.html"
             ],
             "dependencies": [
-              "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox/main",
-              "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map/main"
+              "cubx.core.rte@1.9.0/cubxpolymer/main"
             ]
           }
         ],
         "slots": [
           {
-            "slotId": "change",
+            "slotId": "updateMapObject",
+            "type": "object",
+            "direction": [
+              "input"
+            ]
+          },
+          {
+            "slotId": "polyToAdd",
+            "type": "object",
+            "direction": [
+              "output"
+            ]
+          },
+          {
+            "slotId": "polyToRemove",
             "type": "object",
             "direction": [
               "output"
             ]
           }
-        ],
-        "members": [
-          {
-            "memberId": "checkBox",
-            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
-          },
-          {
-            "memberId": "googleMap",
-            "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
-          }
-        ],
-        "connections": [
-          {
-            "connectionId": "checkBoxCon",
-            "source": {
-              "memberIdRef": "checkBox",
-              "slot": "checked"
-            },
-            "destination": {
-              "slot": "change"
-            },
-            "hookFunction": "com_incowia_google_map_connector.addRemoveMarker"
-          }
-        ],
-        "inits": [
-          {
-            "slot": "checked",
-            "value": true,
-            "memberIdRef": "checkBox"
-          }
         ]
-      },
+      }
+    ],
+    "compoundComponents": [
       {
-        "artifactId": "locations-selector",
+        "artifactId": "german-states",
         "description": "This is a cubbles-compound-component.",
         "runnables": [
           {
@@ -126,44 +110,596 @@
           {
             "endpointId": "main",
             "resources": [
-              "css/locations-selector.css"
+              "css/german-states.css",
+              "template.html",
+              "jsFunctions.js"
             ],
             "dependencies": [
-              "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox/main"
+              "bootstrap-3.3.5@1.0.3/bootstrap/main",
+              "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map/main",
+              "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox/main",
+              "this/map-controller/main"
             ]
           }
         ],
-        "slots": [
-          {
-            "slotId": "change",
-            "type": "object",
-            "direction": [
-              "output"
-            ]
-          }
-        ],
+        "slots": [],
         "members": [
           {
-            "memberId": "checkBox",
+            "memberId": "map",
+            "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
+          },
+          {
+            "memberId": "allCB",
             "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "hamburgCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "niedersachsenCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "bremenCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "nordrheinWCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "hessenCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "rheinlandPCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "badenCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "bayernCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "saarlandCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "berlinCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "brandenburgCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "mecklenburgVCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "sachsenCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "sachsenACB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "thueringenCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "schleswigHCB",
+            "componentId": "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox"
+          },
+          {
+            "memberId": "mapController",
+            "componentId": "this/map-controller"
           }
         ],
         "connections": [
           {
-            "connectionId": "temperature-transfer",
+            "connectionId": "hamburgCon",
             "source": {
-              "slot": "outdoor-temperature"
+              "memberIdRef": "hamburgCB",
+              "slot": "checked"
             },
             "destination": {
-              "memberIdRef": "member1",
-              "slot": "temperatureIn"
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateHamburg"
+          },
+          {
+            "connectionId": "niedersachsenCon",
+            "source": {
+              "memberIdRef": "niedersachsenCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateNiedersachsen"
+          },
+          {
+            "connectionId": "bremenCon",
+            "source": {
+              "memberIdRef": "bremenCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBremen"
+          },
+          {
+            "connectionId": "nordrheinCon",
+            "source": {
+              "memberIdRef": "nordrheinWCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateNordrheinW"
+          },
+          {
+            "connectionId": "hessenCon",
+            "source": {
+              "memberIdRef": "hessenCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateHessen"
+          },
+          {
+            "connectionId": "rheinlandPCon",
+            "source": {
+              "memberIdRef": "rheinlandPCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateRheinlandP"
+          },
+          {
+            "connectionId": "badenCon",
+            "source": {
+              "memberIdRef": "badenCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBadenW"
+          },
+          {
+            "connectionId": "bayernCon",
+            "source": {
+              "memberIdRef": "bayernCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBayern"
+          },
+          {
+            "connectionId": "saarlandCon",
+            "source": {
+              "memberIdRef": "saarlandCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSaarland"
+          },
+          {
+            "connectionId": "berlinCon",
+            "source": {
+              "memberIdRef": "berlinCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBerlin"
+          },
+          {
+            "connectionId": "brandenburgCon",
+            "source": {
+              "memberIdRef": "brandenburgCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBrandenburg"
+          },
+          {
+            "connectionId": "mecklenburgVCon",
+            "source": {
+              "memberIdRef": "mecklenburgVCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateMecklengburgV"
+          },
+          {
+            "connectionId": "sachsenCon",
+            "source": {
+              "memberIdRef": "sachsenCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSachsen"
+          },
+          {
+            "connectionId": "sachsenACon",
+            "source": {
+              "memberIdRef": "sachsenACB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSachsenA"
+          },
+          {
+            "connectionId": "thueringenCon",
+            "source": {
+              "memberIdRef": "thueringenCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateThueringen"
+          },
+          {
+            "connectionId": "schleswigHCon",
+            "source": {
+              "memberIdRef": "schleswigHCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mapController",
+              "slot": "updateMapObject"
+            },
+            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSchleswigH"
+          },
+          {
+            "connectionId": "allCBToHamburg",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "hamburgCB",
+              "slot": "checked"
             }
+          },
+          {
+            "connectionId": "allCBToNiedersachsenCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "niedersachsenCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToBremenCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "bremenCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToNordrheinWCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "nordrheinWCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToHessenCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "hessenCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToRheinlandPCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "rheinlandPCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToBadenCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "badenCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToBayernCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "bayernCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToSaarlandCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "saarlandCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToBerlinCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "berlinCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToBrandenburgCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "brandenburgCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToMecklenburgVCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "mecklenburgVCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToSachsenCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "sachsenCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToSachsenACB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "sachsenACB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToThueringenCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "thueringenCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "allCBToSchleswigHCB",
+            "source": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            },
+            "destination": {
+              "memberIdRef": "schleswigHCB",
+              "slot": "checked"
+            }
+          },
+          {
+            "connectionId": "polyToAddCon",
+            "source": {
+              "memberIdRef": "mapController",
+              "slot": "polyToAdd"
+            },
+            "destination": {
+              "memberIdRef": "map",
+              "slot": "polyToAdd"
+            },
+            "repeatedValues": true
+          },
+          {
+            "connectionId": "polyToRemoveCon",
+            "source": {
+              "memberIdRef": "mapController",
+              "slot": "polyToRemove"
+            },
+            "destination": {
+              "memberIdRef": "map",
+              "slot": "polyToRemove"
+            },
+            "repeatedValues": true
           }
         ],
         "inits": [
           {
-            "slot": "outdoor-temperature",
-            "value": 0
+            "memberIdRef": "allCB",
+            "slot": "checked",
+            "value": true
+          },
+          {
+            "memberIdRef": "allCB",
+            "slot": "rightText",
+            "value": "Select/Deselect all"
+          },
+          {
+            "memberIdRef": "hamburgCB",
+            "slot": "rightText",
+            "value": "Hamburg"
+          },
+          {
+            "memberIdRef": "niedersachsenCB",
+            "slot": "rightText",
+            "value": "Niedersachsen"
+          },
+          {
+            "memberIdRef": "bremenCB",
+            "slot": "rightText",
+            "value": "Bremen"
+          },
+          {
+            "memberIdRef": "nordrheinWCB",
+            "slot": "rightText",
+            "value": "Nordrhein-Westfalen"
+          },
+          {
+            "memberIdRef": "hessenCB",
+            "slot": "rightText",
+            "value": "Hessen"
+          },
+          {
+            "memberIdRef": "rheinlandPCB",
+            "slot": "rightText",
+            "value": "Rheinland-Pfalz"
+          },
+          {
+            "memberIdRef": "badenCB",
+            "slot": "rightText",
+            "value": "Baden Wuerttemberg"
+          },
+          {
+            "memberIdRef": "bayernCB",
+            "slot": "rightText",
+            "value": "Bayern"
+          },
+          {
+            "memberIdRef": "saarlandCB",
+            "slot": "rightText",
+            "value": "Saarland"
+          },
+          {
+            "memberIdRef": "berlinCB",
+            "slot": "rightText",
+            "value": "Berlin"
+          },
+          {
+            "memberIdRef": "brandenburgCB",
+            "slot": "rightText",
+            "value": "Brandenburg"
+          },
+          {
+            "memberIdRef": "mecklenburgVCB",
+            "slot": "rightText",
+            "value": "Mecklenburg-Vorpommern"
+          },
+          {
+            "memberIdRef": "sachsenCB",
+            "slot": "rightText",
+            "value": "Sachsen"
+          },
+          {
+            "memberIdRef": "sachsenACB",
+            "slot": "rightText",
+            "value": "Sachsen-Anhalt"
+          },
+          {
+            "memberIdRef": "thueringenCB",
+            "slot": "rightText",
+            "value": "Thueringen"
+          },
+          {
+            "memberIdRef": "schleswigHCB",
+            "slot": "rightText",
+            "value": "Schleswig-Holstein"
+          },
+          {
+            "memberIdRef": "map",
+            "slot": "latitude",
+            "value": 51.3
+          },
+          {
+            "memberIdRef": "map",
+            "slot": "longitude",
+            "value": 10.3
+          },
+          {
+            "memberIdRef": "map",
+            "slot": "zoom",
+            "value": 6
           }
         ]
       }
