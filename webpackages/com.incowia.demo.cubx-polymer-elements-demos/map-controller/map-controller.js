@@ -42,11 +42,11 @@
      */
     modelUpdateMapObjectChanged: function (updateMapObject) {
       // if (!this._cubxReady) return;
-      switch (updateMapObject.updateType) {
-        case 'add':
+      switch (updateMapObject.action) {
+        case 'addPoly':
           this.setPolyToAdd(updateMapObject.element);
           break;
-        case 'remove':
+        case 'removePoly':
           this.setPolyToRemove(updateMapObject.element);
           break;
         default:

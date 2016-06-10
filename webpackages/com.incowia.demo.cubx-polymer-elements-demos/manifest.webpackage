@@ -40,13 +40,8 @@
     "elementaryComponents": [
       {
         "artifactId": "map-controller",
-        "description": "Component process cubx-google-map changes",
+        "description": "Component that processes cubx-google-map changes",
         "runnables": [
-          {
-            "name": "demo",
-            "path": "/demo/index.html",
-            "description": "Demo app..."
-          },
           {
             "name": "docs",
             "path": "/docs/index.html",
@@ -96,7 +91,7 @@
         "description": "This is a cubbles-compound-component.",
         "runnables": [
           {
-            "name": "demo",
+            "name": "Demo German States (only Cubbles)",
             "path": "/demo/index.html",
             "description": "Demo app..."
           },
@@ -118,12 +113,26 @@
               "bootstrap-3.3.5@1.0.3/bootstrap/main",
               "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map/main",
               "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox/main",
+              "com.incowia.ajax@0.1.0-SNAPSHOT/ajax-request/main",
               "this/map-controller/main"
             ]
           }
         ],
-        "slots": [],
+        "slots": [
+          {
+            "slotId": "kmlURl",
+            "type": "string",
+            "direction": [
+              "input"
+            ],
+            "value": "../data/polys.kml"
+          }
+        ],
         "members": [
+          {
+            "memberId": "ajaxRequest",
+            "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
+          },
           {
             "memberId": "map",
             "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
