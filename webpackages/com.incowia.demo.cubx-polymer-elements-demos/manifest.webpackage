@@ -711,6 +711,138 @@
             "value": 6
           }
         ]
+      },
+      {
+        "artifactId": "world-places",
+        "description": "Component to show the cubx-paper-menu and the cubx-google-map components working together ",
+        "runnables": [
+          {
+            "name": "demo",
+            "path": "/demo/index.html",
+            "description": "Demo app..."
+          },
+          {
+            "name": "docs",
+            "path": "/docs/index.html",
+            "description": "Show the interface and dataflow of this component."
+          }
+        ],
+        "endpoints": [
+          {
+            "endpointId": "main",
+            "resources": [
+              "css/world-places.css",
+              "template.html"
+            ],
+            "dependencies": [
+              "bootstrap-3.3.5@1.0.3/bootstrap/main",
+              "com.incowia.cubx-paper-menu@0.1.0-SNAPSHOT/cubx-paper-menu/main",
+              "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map/main"
+            ]
+          }
+        ],
+        "slots": [],
+        "members": [
+          {
+            "memberId": "paperMenu",
+            "componentId": "com.incowia.cubx-paper-menu@0.1.0-SNAPSHOT/cubx-paper-menu"
+          },
+          {
+            "memberId": "googleMap",
+            "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
+          }
+        ],
+        "connections": [
+          {
+            "connectionId": "selectedMarker",
+            "source": {
+              "memberIdRef": "paperMenu",
+              "slot": "selectedMenuValues"
+            },
+            "destination": {
+              "memberIdRef": "googleMap",
+              "slot": "markers"
+            }
+          }
+        ],
+        "inits": [
+          {
+            "memberIdRef": "paperMenu",
+            "slot": "menuItems",
+            "value": [
+              {
+                "id": "london",
+                "marker": {"latitude": 51.507351, "longitude": -0.127758, "title": "London, United Kingdom"},
+                "textContent": "London, United Kingdom"
+              },
+              {
+                "id": "istanbul",
+                "marker": {"latitude": 41.008238, "longitude": 28.978359, "title": "Istanbul, Turkey"},
+                "textContent": "Istanbul, Turkey"
+              },
+              {
+                "id": "marrakech",
+                "marker": {"latitude": 31.629472, "longitude": -7.981084, "title": "Marrakech, Morocco"},
+                "textContent": "Marrakech, Morocco"
+              },
+              {
+                "id": "paris",
+                "marker": {"latitude": 48.856614, "longitude": 2.352222, "title": "Paris, France"},
+                "textContent": "Paris, France"
+              },
+              {
+                "id": "siemReap",
+                "marker": {"latitude": 13.367097, "longitude": 103.844813, "title": "Siem Reap, Cambodia"},
+                "textContent": "Siem Reap, Cambodia"
+              },
+              {
+                "id": "prague",
+                "marker": {"latitude": 50.075538, "longitude": 14.437800, "title": "Prague, Czech Republic"},
+                "textContent": "Prague, Czech Republic"
+              },
+              {
+                "id": "rome",
+                "marker": {"latitude": 41.902783, "longitude": 12.496366, "title": "Rome, Italy"},
+                "textContent": "Rome, Italy"
+              },
+              {
+                "id": "hanoi",
+                "marker": {"latitude": 21.027764, "longitude": 105.834160, "title": "Hanoi, Vietnam"},
+                "textContent": "Hanoi, Vietnam"
+              },
+              {
+                "id": "newYork",
+                "marker": {"latitude": 40.712784, "longitude": -74.005941, "title": "New York City, New york"},
+                "textContent": "New York City, New york"
+              },
+              {
+                "id": "berlin",
+                "marker": {"latitude": 52.520007, "longitude": 13.404954, "title": "Berlin, Germany"},
+                "textContent": "Berlin, Germany"
+              },
+              {
+                "id": "cali",
+                "marker": {"latitude": 3.451647, "longitude": -76.531985, "title": "Cali, Colombia"},
+                "textContent": "Cali, Colombia"
+              }
+            ]
+          },
+          {
+            "memberIdRef": "paperMenu",
+            "slot": "multi",
+            "value": true
+          },
+          {
+            "memberIdRef": "paperMenu",
+            "slot": "attrForSelected",
+            "value": "marker"
+          },
+          {
+            "memberIdRef": "googleMap",
+            "slot": "fitToMarkers",
+            "value": true
+          }
+        ]
       }
     ],
     "utilities": []
