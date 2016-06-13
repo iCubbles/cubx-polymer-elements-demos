@@ -113,7 +113,6 @@
               "bootstrap-3.3.5@1.0.3/bootstrap/main",
               "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map/main",
               "com.incowia.basic-html-components@0.1.0-SNAPSHOT/cubx-checkbox/main",
-              "com.incowia.ajax@0.1.0-SNAPSHOT/ajax-request/main",
               "this/map-controller/main"
             ]
           }
@@ -129,10 +128,6 @@
           }
         ],
         "members": [
-          {
-            "memberId": "ajaxRequest",
-            "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
-          },
           {
             "memberId": "map",
             "componentId": "com.incowia.cubx-google-map@1.0.0-SNAPSHOT/cubx-google-map"
@@ -221,7 +216,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateHamburg"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateHamburg"
           },
           {
             "connectionId": "niedersachsenCon",
@@ -233,7 +228,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateNiedersachsen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateNiedersachsen"
           },
           {
             "connectionId": "bremenCon",
@@ -245,7 +240,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBremen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBremen"
           },
           {
             "connectionId": "nordrheinCon",
@@ -257,7 +252,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateNordrheinW"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateNordrheinW"
           },
           {
             "connectionId": "hessenCon",
@@ -269,7 +264,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateHessen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateHessen"
           },
           {
             "connectionId": "rheinlandPCon",
@@ -281,7 +276,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateRheinlandP"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateRheinlandP"
           },
           {
             "connectionId": "badenCon",
@@ -293,7 +288,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBadenW"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBadenW"
           },
           {
             "connectionId": "bayernCon",
@@ -305,7 +300,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBayern"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBayern"
           },
           {
             "connectionId": "saarlandCon",
@@ -317,7 +312,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSaarland"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSaarland"
           },
           {
             "connectionId": "berlinCon",
@@ -329,7 +324,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBerlin"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBerlin"
           },
           {
             "connectionId": "brandenburgCon",
@@ -341,7 +336,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateBrandenburg"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBrandenburg"
           },
           {
             "connectionId": "mecklenburgVCon",
@@ -353,7 +348,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateMecklengburgV"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateMecklengburgV"
           },
           {
             "connectionId": "sachsenCon",
@@ -365,7 +360,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSachsen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSachsen"
           },
           {
             "connectionId": "sachsenACon",
@@ -377,7 +372,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSachsenA"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSachsenA"
           },
           {
             "connectionId": "thueringenCon",
@@ -389,7 +384,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateThueringen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateThueringen"
           },
           {
             "connectionId": "schleswigHCon",
@@ -401,7 +396,7 @@
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polmerElementsDemo.updateSchleswigH"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSchleswigH"
           },
           {
             "connectionId": "allCBToHamburg",
@@ -772,57 +767,101 @@
             "value": [
               {
                 "id": "london",
-                "marker": {"latitude": 51.507351, "longitude": -0.127758, "title": "London, United Kingdom"},
+                "marker": {
+                  "latitude": 51.507351,
+                  "longitude": -0.127758,
+                  "title": "London, United Kingdom"
+                },
                 "textContent": "London, United Kingdom"
               },
               {
                 "id": "istanbul",
-                "marker": {"latitude": 41.008238, "longitude": 28.978359, "title": "Istanbul, Turkey"},
+                "marker": {
+                  "latitude": 41.008238,
+                  "longitude": 28.978359,
+                  "title": "Istanbul, Turkey"
+                },
                 "textContent": "Istanbul, Turkey"
               },
               {
                 "id": "marrakech",
-                "marker": {"latitude": 31.629472, "longitude": -7.981084, "title": "Marrakech, Morocco"},
+                "marker": {
+                  "latitude": 31.629472,
+                  "longitude": -7.981084,
+                  "title": "Marrakech, Morocco"
+                },
                 "textContent": "Marrakech, Morocco"
               },
               {
                 "id": "paris",
-                "marker": {"latitude": 48.856614, "longitude": 2.352222, "title": "Paris, France"},
+                "marker": {
+                  "latitude": 48.856614,
+                  "longitude": 2.352222,
+                  "title": "Paris, France"
+                },
                 "textContent": "Paris, France"
               },
               {
                 "id": "siemReap",
-                "marker": {"latitude": 13.367097, "longitude": 103.844813, "title": "Siem Reap, Cambodia"},
+                "marker": {
+                  "latitude": 13.367097,
+                  "longitude": 103.844813,
+                  "title": "Siem Reap, Cambodia"
+                },
                 "textContent": "Siem Reap, Cambodia"
               },
               {
                 "id": "prague",
-                "marker": {"latitude": 50.075538, "longitude": 14.437800, "title": "Prague, Czech Republic"},
+                "marker": {
+                  "latitude": 50.075538,
+                  "longitude": 14.4378,
+                  "title": "Prague, Czech Republic"
+                },
                 "textContent": "Prague, Czech Republic"
               },
               {
                 "id": "rome",
-                "marker": {"latitude": 41.902783, "longitude": 12.496366, "title": "Rome, Italy"},
+                "marker": {
+                  "latitude": 41.902783,
+                  "longitude": 12.496366,
+                  "title": "Rome, Italy"
+                },
                 "textContent": "Rome, Italy"
               },
               {
                 "id": "hanoi",
-                "marker": {"latitude": 21.027764, "longitude": 105.834160, "title": "Hanoi, Vietnam"},
+                "marker": {
+                  "latitude": 21.027764,
+                  "longitude": 105.83416,
+                  "title": "Hanoi, Vietnam"
+                },
                 "textContent": "Hanoi, Vietnam"
               },
               {
                 "id": "newYork",
-                "marker": {"latitude": 40.712784, "longitude": -74.005941, "title": "New York City, New york"},
+                "marker": {
+                  "latitude": 40.712784,
+                  "longitude": -74.005941,
+                  "title": "New York City, New york"
+                },
                 "textContent": "New York City, New york"
               },
               {
                 "id": "berlin",
-                "marker": {"latitude": 52.520007, "longitude": 13.404954, "title": "Berlin, Germany"},
+                "marker": {
+                  "latitude": 52.520007,
+                  "longitude": 13.404954,
+                  "title": "Berlin, Germany"
+                },
                 "textContent": "Berlin, Germany"
               },
               {
                 "id": "cali",
-                "marker": {"latitude": 3.451647, "longitude": -76.531985, "title": "Cali, Colombia"},
+                "marker": {
+                  "latitude": 3.451647,
+                  "longitude": -76.531985,
+                  "title": "Cali, Colombia"
+                },
                 "textContent": "Cali, Colombia"
               }
             ]
