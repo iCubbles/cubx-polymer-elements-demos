@@ -6,118 +6,118 @@
   'use strict';
 
   // set namespace containing the german-states functions (i.e. hook functions)
-  window.com_incowia_demo_polmerElementsDemo = {
+  window.com_incowia_demo_polymerElementsDemos_germanStates = {
 
     statesPolys: [],
 
     // Hook function to determine whether Hamburg poly should be added to or removed from the map
     updateHamburg: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 0));
     },
 
     // Hook function to determine whether Niedersachsen poly should be added to or removed from the map
     updateNiedersachsen: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 1));
     },
 
     // Hook function to determine whether Bremen poly should be added to or removed from the map
     updateBremen: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 2));
     },
 
     // Hook function to determine whether Nordrhein Westfalen poly should be added to or removed from the map
     updateNordrheinW: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 3));
     },
 
     // Hook function to determine whether Hessen poly should be added to or removed from the map
     updateHessen: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 4));
     },
 
     // Hook function to determine whether Rheinland Pfalz poly should be added to or removed from the map
     updateRheinlandP: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 5));
     },
 
     // Hook function to determine whether Baden Wuerttemberg poly should be added to or removed from the map
     updateBadenW: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 6));
     },
 
     // Hook function to determine whether Bayern poly should be added to or removed from the map
     updateBayern: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 7));
     },
 
     // Hook function to determine whether Saarland poly should be added to or removed from the map
     updateSaarland: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 8));
     },
 
     // Hook function to determine whether Berlin poly should be added to or removed from the map
     updateBerlin: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 9));
     },
 
     // Hook function to determine whether Brandenburg poly should be added to or removed from the map
     updateBrandenburg: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 10));
     },
 
     // Hook function to determine whether Mecklenburg Vorpommern poly should be added to or removed from the map
     updateMecklengburgV: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 11));
     },
 
     // Hook function to determine whether Sachsen poly should be added to or removed from the map
     updateSachsen: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 12));
     },
 
     // Hook function to determine whether Sachsen Anhalt poly should be added to or removed from the map
     updateSachsenA: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 13));
     },
 
     // Hook function to determine whether Thueringen poly should be added to or removed from the map
     updateThueringen: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 14));
     },
 
     // Hook function to determine whether Schleswig Holstein poly should be added to or removed from the map
     updateSchleswigH: function (add, next) {
-      var self = window.com_incowia_demo_polmerElementsDemo;
+      var self = window.com_incowia_demo_polymerElementsDemos_germanStates;
       if (self.statesPolys.length < 0) return;
       next(self.createAddPolyObject(add, 15));
     },
@@ -166,5 +166,5 @@
       }
     }
   };
-  window.com_incowia_demo_polmerElementsDemo.loadPolys();
+  window.com_incowia_demo_polymerElementsDemos_germanStates.loadPolys();
 })();
