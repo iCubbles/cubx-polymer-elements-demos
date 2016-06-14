@@ -767,7 +767,7 @@
             "value": [
               {
                 "id": "london",
-                "marker": {
+                "value": {
                   "latitude": 51.507351,
                   "longitude": -0.127758,
                   "title": "London, United Kingdom"
@@ -776,7 +776,7 @@
               },
               {
                 "id": "istanbul",
-                "marker": {
+                "value": {
                   "latitude": 41.008238,
                   "longitude": 28.978359,
                   "title": "Istanbul, Turkey"
@@ -785,7 +785,7 @@
               },
               {
                 "id": "marrakech",
-                "marker": {
+                "value": {
                   "latitude": 31.629472,
                   "longitude": -7.981084,
                   "title": "Marrakech, Morocco"
@@ -794,7 +794,7 @@
               },
               {
                 "id": "paris",
-                "marker": {
+                "value": {
                   "latitude": 48.856614,
                   "longitude": 2.352222,
                   "title": "Paris, France"
@@ -803,7 +803,7 @@
               },
               {
                 "id": "siemReap",
-                "marker": {
+                "value": {
                   "latitude": 13.367097,
                   "longitude": 103.844813,
                   "title": "Siem Reap, Cambodia"
@@ -812,7 +812,7 @@
               },
               {
                 "id": "prague",
-                "marker": {
+                "value": {
                   "latitude": 50.075538,
                   "longitude": 14.4378,
                   "title": "Prague, Czech Republic"
@@ -821,7 +821,7 @@
               },
               {
                 "id": "rome",
-                "marker": {
+                "value": {
                   "latitude": 41.902783,
                   "longitude": 12.496366,
                   "title": "Rome, Italy"
@@ -830,7 +830,7 @@
               },
               {
                 "id": "hanoi",
-                "marker": {
+                "value": {
                   "latitude": 21.027764,
                   "longitude": 105.83416,
                   "title": "Hanoi, Vietnam"
@@ -839,7 +839,7 @@
               },
               {
                 "id": "newYork",
-                "marker": {
+                "value": {
                   "latitude": 40.712784,
                   "longitude": -74.005941,
                   "title": "New York City, New york"
@@ -848,7 +848,7 @@
               },
               {
                 "id": "berlin",
-                "marker": {
+                "value": {
                   "latitude": 52.520007,
                   "longitude": 13.404954,
                   "title": "Berlin, Germany"
@@ -857,7 +857,7 @@
               },
               {
                 "id": "cali",
-                "marker": {
+                "value": {
                   "latitude": 3.451647,
                   "longitude": -76.531985,
                   "title": "Cali, Colombia"
@@ -874,7 +874,7 @@
           {
             "memberIdRef": "paperMenu",
             "slot": "attrForSelected",
-            "value": "marker"
+            "value": "value"
           },
           {
             "memberIdRef": "googleMap",
