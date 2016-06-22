@@ -119,12 +119,11 @@
         ],
         "slots": [
           {
-            "slotId": "kmlURl",
-            "type": "string",
+            "slotId": "checkAll",
+            "type": "boolean",
             "direction": [
               "input"
-            ],
-            "value": "../data/polys.kml"
+            ]
           }
         ],
         "members": [
@@ -210,193 +209,193 @@
             "connectionId": "hamburgCon",
             "source": {
               "memberIdRef": "hamburgCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateHamburg"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "niedersachsenCon",
             "source": {
               "memberIdRef": "niedersachsenCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateNiedersachsen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "bremenCon",
             "source": {
               "memberIdRef": "bremenCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBremen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "nordrheinCon",
             "source": {
               "memberIdRef": "nordrheinWCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateNordrheinW"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "hessenCon",
             "source": {
               "memberIdRef": "hessenCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateHessen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "rheinlandPCon",
             "source": {
               "memberIdRef": "rheinlandPCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateRheinlandP"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "badenCon",
             "source": {
               "memberIdRef": "badenCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBadenW"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "bayernCon",
             "source": {
               "memberIdRef": "bayernCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBayern"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "saarlandCon",
             "source": {
               "memberIdRef": "saarlandCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSaarland"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "berlinCon",
             "source": {
               "memberIdRef": "berlinCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBerlin"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "brandenburgCon",
             "source": {
               "memberIdRef": "brandenburgCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateBrandenburg"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "mecklenburgVCon",
             "source": {
               "memberIdRef": "mecklenburgVCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateMecklengburgV"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "sachsenCon",
             "source": {
               "memberIdRef": "sachsenCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSachsen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "sachsenACon",
             "source": {
               "memberIdRef": "sachsenACB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSachsenA"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "thueringenCon",
             "source": {
               "memberIdRef": "thueringenCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateThueringen"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "schleswigHCon",
             "source": {
               "memberIdRef": "schleswigHCB",
-              "slot": "checked"
+              "slot": "changeObject"
             },
             "destination": {
               "memberIdRef": "mapController",
               "slot": "updateMapObject"
             },
-            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateSchleswigH"
+            "hookFunction": "window.com_incowia_demo_polymerElementsDemos_germanStates.updateState"
           },
           {
             "connectionId": "allCBToHamburg",
@@ -575,6 +574,16 @@
             }
           },
           {
+            "connectionId": "checkAllToAllCB",
+            "source": {
+              "slot": "checkAll"
+            },
+            "destination": {
+              "memberIdRef": "allCB",
+              "slot": "checked"
+            }
+          },
+          {
             "connectionId": "polyToAddCon",
             "source": {
               "memberIdRef": "mapController",
@@ -600,11 +609,6 @@
           }
         ],
         "inits": [
-          {
-            "memberIdRef": "allCB",
-            "slot": "checked",
-            "value": true
-          },
           {
             "memberIdRef": "allCB",
             "slot": "rightText",
@@ -689,6 +693,86 @@
             "memberIdRef": "schleswigHCB",
             "slot": "rightText",
             "value": "Schleswig-Holstein"
+          },
+          {
+            "memberIdRef": "hamburgCB",
+            "slot": "customValue",
+            "value": {"index": 0}
+          },
+          {
+            "memberIdRef": "niedersachsenCB",
+            "slot": "customValue",
+            "value": {"index": 1}
+          },
+          {
+            "memberIdRef": "bremenCB",
+            "slot": "customValue",
+            "value": {"index": 2}
+          },
+          {
+            "memberIdRef": "nordrheinWCB",
+            "slot": "customValue",
+            "value": {"index": 3}
+          },
+          {
+            "memberIdRef": "hessenCB",
+            "slot": "customValue",
+            "value": {"index": 4}
+          },
+          {
+            "memberIdRef": "rheinlandPCB",
+            "slot": "customValue",
+            "value": {"index": 5}
+          },
+          {
+            "memberIdRef": "badenCB",
+            "slot": "customValue",
+            "value": {"index": 6}
+          },
+          {
+            "memberIdRef": "bayernCB",
+            "slot": "customValue",
+            "value": {"index": 7}
+          },
+          {
+            "memberIdRef": "saarlandCB",
+            "slot": "customValue",
+            "value": {"index": 8}
+          },
+          {
+            "memberIdRef": "berlinCB",
+            "slot": "customValue",
+            "value": {"index": 9}
+          },
+          {
+            "memberIdRef": "brandenburgCB",
+            "slot": "customValue",
+            "value": {"index": 10}
+          },
+          {
+            "memberIdRef": "mecklenburgVCB",
+            "slot": "customValue",
+            "value": {"index": 11}
+          },
+          {
+            "memberIdRef": "sachsenCB",
+            "slot": "customValue",
+            "value": {"index": 12}
+          },
+          {
+            "memberIdRef": "sachsenACB",
+            "slot": "customValue",
+            "value": {"index": 13}
+          },
+          {
+            "memberIdRef": "thueringenCB",
+            "slot": "customValue",
+            "value": {"index": 14}
+          },
+          {
+            "memberIdRef": "schleswigHCB",
+            "slot": "customValue",
+            "value": {"index": 15}
           },
           {
             "memberIdRef": "map",
