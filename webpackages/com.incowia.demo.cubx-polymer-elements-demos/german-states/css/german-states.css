@@ -1,0 +1,14 @@
+.row {
+    display: flex;
+}
+
+.col {
+    margin: auto;
+}
+.col-1 {
+    flex-grow: 1;
+}
+
+.col-7 {
+    flex-grow: 10;
+}
