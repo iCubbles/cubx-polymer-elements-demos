@@ -1,7 +1,7 @@
 {
   "name": "cubx-polymer-elements-demos",
   "groupId": "com.incowia.demo",
-  "version": "0.2.0-SNAPSHOT",
+  "version": "0.2.0",
   "modelVersion": "9.1.1",
   "docType": "webpackage",
   "description": "Webpackage containing demos to show the use of cubx-polymer-elements",
