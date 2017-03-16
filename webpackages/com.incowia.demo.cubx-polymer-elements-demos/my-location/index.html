@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <script src="../../cubx.core.rte@2.2.0/webcomponents-lite/webcomponents-lite.js"></script>
+    <script src="../../cubx.core.rte@2.2.2/webcomponents-lite/webcomponents-lite.js"></script>
 
     <script>
         window.cubx = {
@@ -29,7 +29,7 @@
         Want to add a 'main' -script to be executed after the dependencies have been loaded?
         If yes, add the following attribute: data-crc-main="js/my-script.js"
     -->
-    <script src="../../cubx.core.rte@2.2.0/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
+    <script src="../../cubx.core.rte@2.2.2/crc-loader/js/main.js" data-crcinit-loadcif="true"></script>
 
 </head>
 <body>
@@ -40,8 +40,8 @@
         <div class="col-sm-2"><input type="button" value="Show my location" id="myLocB" class="btn btn-primary"></div>
     </div>
     <div cubx-core-crc class="row">
-        <cubx-google-map cubx-webpackage-id="com.incowia.cubx-google-map@1.0.0-SNAPSHOT" cubx-endpoint-id="main">
-            <cubx-core-init>
+        <cubx-google-map cubx-webpackage-id="com.incowia.cubx-google-map@1.1.0" >
+            <cubx-core-init style="display: none">
                 <cubx-core-slot-init slot="id">"myLocationMap"</cubx-core-slot-init>
             </cubx-core-init>
         </cubx-google-map>

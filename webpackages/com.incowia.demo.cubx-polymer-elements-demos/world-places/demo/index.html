@@ -24,7 +24,11 @@
     Note: Currently there is only one element supported. This will change in future (@see PLAT-205).
 -->
 <div cubx-core-crc>
-     <world-places cubx-webpackage-id="this"></world-places>
+     <world-places cubx-webpackage-id="this">
+         <cubx-core-init style="display: none">
+             <cubx-core-slot-init slot="googleMapsApiKey">"AIzaSyC2FTOZeja_JAuxecv-EoR_duNlRVfKgJg"</cubx-core-slot-init>
+         </cubx-core-init>
+     </world-places>
 </div>
 
 </body>
