@@ -76,7 +76,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "cubx.core.rte@2.2.0",
+            "webpackageId": "cubx.core.rte@2.2.2",
             "artifactId": "cubxpolymer"
           }
         ]
@@ -194,7 +194,6 @@
           {
             "connectionId" : "apiKey-to-google-map",
             "source": {
-
               "slot" : "googleMapsApiKey"
             },
             "destination": {
@@ -1036,7 +1035,7 @@
         ],
         "dependencies": [
           {
-            "webpackageId": "com.incowia.cubx-paper-menu@0.2.0",
+            "webpackageId": "com.incowia.cubx-paper-menu@0.2.1",
             "artifactId": "cubx-paper-menu"
           },
           {
